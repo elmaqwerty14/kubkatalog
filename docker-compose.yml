@@ -17,7 +17,8 @@ services:
         environment:
             MYSQL_DATABASE: untukkatakog
             MYSQL_USER: root
-            MYSQL_ALLOW_EMPTY_PASSWORD: true        
+            MYSQL_PASSWORD: 123456
+            MYSQL_ROOT_PASSWORD: 
         volumes:
             - ./dump:/docker-entrypoint-initdb.d
             - persistent:/var/lib/mysql
@@ -31,7 +32,7 @@ services:
             - 8000:80
         environment:
             MYSQL_USER: root
-            MYSQL_PASSWORD: 
+            MYSQL_PASSWORD: 123456
             MYSQL_ROOT_PASSWORD: 
 volumes:
     persistent:
