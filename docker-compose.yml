@@ -1,14 +1,18 @@
 version: "3.6"
 services:
-    php:
+    www:
         build: .
         restart: always
         ports:
             - "2023:80"
         volumes:
-            - ./src:/var/www/html
+            - ./www:/var/www/html
             - ./log:/var/log/apache2
-    mysql:
+        links:
+            - db
+        networks:
+            - default
+      db:
         image: mysql:8.0
         restart: always
         ports:
@@ -23,12 +27,19 @@ services:
             - ./dump:/docker-entrypoint-initdb.d
             - ./conf:/etc/mysql/conf.d
             - persistent:/var/lib/mysql
+        networks:
+            - default
     phpmyadmin:
-        image: phpmyadmin
+        image: phpmyadmin/phpmyadmin
         restart: always
+        links: 
+            - db:db
         ports:
-            - 8081:80
+            - 8000:80
         environment:
             - PMA_HOST=mysql
+            - MYSQL_USER=user
+            - MYSQL_PASSWORD=test
+            - MYSQL_ROOT_PASSWORD=test
 volumes:
     persistent:
