@@ -11,6 +11,7 @@ services:
         networks:
             - default
     db:
+        container_name: db
         image: mysql
         ports: 
             - "3306:3306"
