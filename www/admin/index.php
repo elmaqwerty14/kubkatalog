@@ -211,13 +211,14 @@ include '../koneksi.php';
     <script>
         <?php
             // define hostname, username, password, dbname
-            $hostname = 'localhost';
-            $username = 'root';
-            $password = '';
+            $hostname = 'db';
+            $username = 'user';
+            $password = 'test';
             $dbname = 'untukkatakog';
             // koneksi ke database dengan definename
+            
             $conn = mysqli_connect($hostname, $username, $password, $dbname);
-
+            mysqli_set_charset($conn, "utf8");
             // pengecekan koneksi  ke database
             if(!$conn) {
                 echo "koneksi gagal" + mysqli_connect_error();
