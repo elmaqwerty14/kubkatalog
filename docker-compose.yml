@@ -1,38 +1,34 @@
-version: "2"
+version: "3.6"
 services:
-    www:
+    php:
         build: .
-        ports: 
+        restart: always
+        ports:
             - "2023:80"
         volumes:
-            - ./www:/var/www/html/
-        links:
-            - db
-        networks:
-            - default
-    db:
-        container_name: db
-        image: mysql
-        ports: 
+            - ./src:/var/www/html
+            - ./log:/var/log/apache2
+    mysql:
+        image: mysql:8.0
+        restart: always
+        ports:
             - "3306:3306"
+        command: --default-authentication-plugin=mysql_native_password
         environment:
-            MYSQL_DATABASE: untukkatakog
-            MYSQL_PASSWORD: 1
-            MYSQL_ROOT_PASSWORD: 1
+            - MYSQL_DATABASE=untukkatakog
+            - MYSQL_USER=user
+            - MYSQL_PASSWORD=test
+            - MYSQL_ROOT_PASSWORD=test
         volumes:
             - ./dump:/docker-entrypoint-initdb.d
+            - ./conf:/etc/mysql/conf.d
             - persistent:/var/lib/mysql
-        networks:
-            - default
     phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        links: 
-            - db:db
+        image: phpmyadmin
+        restart: always
         ports:
-            - 8000:80
+            - 8081:80
         environment:
-            MYSQL_USER: root
-            MYSQL_PASSWORD: 1
-            MYSQL_ROOT_PASSWORD: 1
+            - PMA_HOST=mysql
 volumes:
     persistent:
