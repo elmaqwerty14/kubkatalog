@@ -20,6 +20,8 @@ curl_setopt_array($curl, array(
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => "POST",
     CURLOPT_POSTFIELDS => "origin=42&destination=".$distrik."&weight=".$berat."&courier=".$ekspedisi,
+    CURLOPT_SSL_VERIFYHOST => 0, 
+    CURLOPT_SSL_VERIFYPEER => 0,
     // CURLOPT_POSTFIELDS => "origin=".$asal."&destination=".$id_kabupaten."&weight=".$berat."&courier=".$kurir."",
     CURLOPT_HTTPHEADER => array(
         "content-type: application/x-www-form-urlencoded",
