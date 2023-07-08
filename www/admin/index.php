@@ -210,8 +210,17 @@ include '../koneksi.php';
     <!-- End custom js for this page -->
     <script>
         <?php
+            // define hostname, username, password, dbname
+            $hostname = 'db';
+            $username = 'user';
+            $password = 'test';
+            $dbname = 'untukkatakog';
+            // koneksi ke database dengan definename
+            
+            $conn = mysqli_connect($hostname, $username, $password, $dbname);
+            mysqli_set_charset($conn, "utf8");
             // pengecekan koneksi  ke database
-            if(!$koneksi) {
+            if(!$conn) {
                 echo "koneksi gagal" + mysqli_connect_error();
             }
             ?>
@@ -227,19 +236,19 @@ include '../koneksi.php';
                 data: [
                     <?php 
                     // query untuk koneksi dan ambil data dari database
-                    $qry = $koneksi->query("SELECT ekspedisi FROM pembelian  WHERE ekspedisi ='pos'");
+                    $qry = $conn->query("SELECT ekspedisi FROM pembelian  WHERE ekspedisi ='pos'");
                     $resF = $qry->num_rows;
                     echo $resF;
                     ?>,
                     <?php 
                     // query untuk koneksi dan ambil data dari database
-                    $qry = $koneksi->query("SELECT ekspedisi FROM pembelian  WHERE ekspedisi ='tiki'");
+                    $qry = $conn->query("SELECT ekspedisi FROM pembelian  WHERE ekspedisi ='tiki'");
                     $resF = $qry->num_rows;
                     echo $resF;
                     ?>,
                     <?php 
                     // query untuk koneksi dan ambil data dari database
-                    $qry = $koneksi->query("SELECT ekspedisi FROM pembelian  WHERE ekspedisi ='jne'");
+                    $qry = $conn->query("SELECT ekspedisi FROM pembelian  WHERE ekspedisi ='jne'");
                     $resF = $qry->num_rows;
                     echo $resF;
                     ?>
@@ -276,13 +285,13 @@ include '../koneksi.php';
                 data: [
                     <?php 
                     // query untuk koneksi dan ambil data dari database
-                    $qry = $koneksi->query("SELECT status_pembelian FROM pembelian WHERE status_pembelian='Pending'");
+                    $qry = $conn->query("SELECT status_pembelian FROM pembelian WHERE status_pembelian='Pending'");
                     $resF = $qry->num_rows;
                     echo $resF;
                     ?>,
                     <?php 
                     // query untuk koneksi dan ambil data dari database
-                    $qry = $koneksi->query("SELECT status_pembelian FROM pembelian WHERE status_pembelian='Sudah Kirim Pembayaran'");
+                    $qry = $conn->query("SELECT status_pembelian FROM pembelian WHERE status_pembelian='Sudah Kirim Pembayaran'");
                     $resF = $qry->num_rows;
                     echo $resF;
                     ?>
