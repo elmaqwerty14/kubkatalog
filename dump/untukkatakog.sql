@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Jun 2023 pada 15.58
+-- Waktu pembuatan: 08 Jul 2023 pada 20.21
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.11
 
@@ -174,7 +174,7 @@ INSERT INTO `pembeli` (`id_pembeli`, `nama`, `alamat`, `telepon`, `email`, `pass
 (1, 'Karlos Nende', ' Jl. Embong Kenongo No 17 Surabaya ', '085111253741', 'karlos@gmail.com', 'karlos', 'Jawa Timur', 'Surabaya', 'Kota', '60119', '444'),
 (2, 'Ekhy Welo', 'Jl.Sukun, Oesapa, Oesapa Timur, Kota Kupang', '085239777999', 'eky@gmail.com', 'eky', 'Nusa Tenggara Timur (NTT)', 'Kupang', 'Kota', '85119', '213'),
 (3, 'Desty Miha Balo', 'Jl. Air Lobang 3, Maulafa, Sikumana, Kota Kupang', '082266229669', 'desty@gmail.com', 'desty', '', '', '', '', ''),
-(4, 'Elma Kiu', 'Jl. Damai, Oebufu, Oebobo, Kota Kupang', '085238970733', 'elma@gmail.com', 'elma', 'DKI Jakarta', 'Jakarta Pusat', 'Kota', '10540', '152'),
+(4, 'Elma Kiu', 'Jl. Damai, Oebufu, Oebobo, Kota Kupang', '085238970733', 'elma@gmail.com', 'elma', 'DI Yogyakarta', 'Yogyakarta', 'Kota', '55111', '501'),
 (5, 'Ifan Baletty', 'Jl. RE. Martadinata, Potongan Kec. Cilacap Sel., Kabupaten Cilacap, Jawa Tengah 53211', '081334456210', 'ifan@gmail.com', 'ifan', 'Jawa Tengah', 'Cilacap', 'Kabupaten', '53211', '105'),
 (6, 'Yanse Oematan', 'Jl. Damai II Gang Damai 1 RT 30 RW 030 Oebufu', '081339655677', 'yansekiu.haryati2106@gmail.com', 'romansa120300', '', '', '', '', ''),
 (7, 'Elma New', 'Jl. Sarwoendah Purwokerto Kulon', '085338318819', 'elmakiu79@gmail.com', 'elmaakunbaru', '', '', '', '', ''),
@@ -213,7 +213,7 @@ CREATE TABLE `pembelian` (
 
 INSERT INTO `pembelian` (`id_pembelian`, `id_pembeli`, `tgl_pembelian`, `tgl_expired`, `finaltotalbelanjabeli`, `ekspedisi`, `alamat_pengiriman`, `status_pembelian`, `resi_pengiriman`, `ongkir`, `provinsi`, `distrik`, `kodepos`, `tipe`, `paket`, `estimasi`, `total_berat`, `have_seen`) VALUES
 (120, 4, '2023-06-26 07:17:17', '2023-06-29 07:17:17', 63000, 'jne', 'Jl. Damai, Oebufu, Oebobo, Kota Kupang', 'Sudah Kirim Pembayaran', '', 18000, 'DKI Jakarta', 'Jakarta Pusat', '10540', 'Kota', 'OKE', '2-3', 2600, 0),
-(121, 5, '2023-06-26 07:23:07', '2023-06-29 07:23:07', 81000, 'pos', 'Jl. RE. Martadinata, Potongan, Tambakreja, Kec. Cilacap Sel., Kabupaten Cilacap, Jawa Tengah 53211', 'Sudah Kirim Pembayaran', '', 36000, 'Jawa Tengah', 'Cilacap', '53211', 'Kabupaten', 'Pos Reguler', '2 HARI', 3000, 0),
+(121, 5, '2023-06-26 07:23:07', '2023-06-29 07:23:07', 81000, 'pos', 'Jl. RE. Martadinata, Potongan, Tambakreja, Kec. Cilacap Sel., Kabupaten Cilacap, Jawa Tengah 53211', 'Barang Dikirim', '789FGT', 36000, 'Jawa Tengah', 'Cilacap', '53211', 'Kabupaten', 'Pos Reguler', '2 HARI', 3000, 1),
 (122, 4, '2023-06-26 14:16:46', '2023-06-29 14:16:46', 75000, 'jne', 'Jl. Damai, Oebufu, Oebobo, Kota Kupang', 'Sudah Kirim Pembayaran', '', 21000, 'DKI Jakarta', 'Jakarta Pusat', '10540', 'Kota', 'REG', '1-2', 2400, 1);
 
 -- --------------------------------------------------------
