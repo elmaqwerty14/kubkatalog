@@ -259,6 +259,18 @@ include 'koneksi.php';
         $(document).ready(function(){
             console.log('onload')
             $.ajax({
+                type: 'get',
+                url: 'https://api.rajaongkir.com/starter/province',
+                beforeSend:function(request){
+                    request.setRequestHeader('key','bc9ffe0cd076eaba25faf4259e3f6e85')
+                    request.setRequestHeader('Access-Control-Allow-Origin', 'http://localhost');
+                },
+                success:function(hasil_provinsi)
+                {
+                    console.log("hasil_provinsi_ajax", hasil_provinsi)
+                }
+            });
+            $.ajax({
                 type: 'post',
                 url: 'dataProvinsi.php',
                 success:function(hasil_provinsi)
