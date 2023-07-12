@@ -11,8 +11,8 @@ curl_setopt_array($curl, array(
     CURLOPT_TIMEOUT => 30,
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => "GET",
-    CURLOPT_SSL_VERIFYHOST => 2, 
-    CURLOPT_SSL_VERIFYPEER => 2,
+    CURLOPT_SSL_VERIFYHOST => 0, 
+    CURLOPT_SSL_VERIFYPEER => 0,
     CURLOPT_HTTPHEADER => array(
         "key: bc9ffe0cd076eaba25faf4259e3f6e85"
     ),

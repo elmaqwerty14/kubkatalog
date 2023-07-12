@@ -257,11 +257,13 @@ include 'koneksi.php';
     <script>
 
         $(document).ready(function(){
+            console.log('onload')
             $.ajax({
                 type: 'post',
                 url: 'dataProvinsi.php',
                 success:function(hasil_provinsi)
                 {
+                    console.log("hasil_provinsi", hasil_provinsi)
                     $("select[name=nama_provinsi]").html(hasil_provinsi);
                 }
             });
@@ -274,6 +276,7 @@ include 'koneksi.php';
                     data: 'id_provinsi='+id_provinsi_terpilih,
                     success:function(hasil_distrik)
                     {
+                        console.log("hasil_distrik", hasil_distrik)
                         $("select[name=nama_distrik]").html(hasil_distrik);
                     }
                 });
@@ -284,6 +287,7 @@ include 'koneksi.php';
                 url: 'dataEkspedisi.php',
                 success:function(hasil_ekspedisi)
                 {
+                    console.log("hasil_ekspedisi", hasil_ekspedisi)
                     $("select[name=nama_ekspedisi]").html(hasil_ekspedisi);
                 }
             });

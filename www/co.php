@@ -457,6 +457,7 @@ if (empty($_SESSION["keranjang"]) or !isset($_SESSION["keranjang"])) {
                 url: 'dataProvinsi.php',
                 success:function(hasil_provinsi)
                 {
+                    console.log("hasil_provinsi", hasil_provinsi)
                     $("select[name=nama_provinsi]").html(hasil_provinsi);
                 }
             });
@@ -469,6 +470,8 @@ if (empty($_SESSION["keranjang"]) or !isset($_SESSION["keranjang"])) {
                     data: 'id_provinsi='+id_provinsi_terpilih,
                     success:function(hasil_distrik)
                     {
+                        console.log('co hasil_distrik',hasil_distrik)
+                        
                         $("select[name=nama_distrik]").html(hasil_distrik);
                     }
                 });
@@ -479,6 +482,7 @@ if (empty($_SESSION["keranjang"]) or !isset($_SESSION["keranjang"])) {
                 url: 'dataEkspedisi.php',
                 success:function(hasil_ekspedisi)
                 {
+                    console.log('co hasil_ekspedisi',hasil_ekspedisi)
                     $("select[name=nama_ekspedisi]").html(hasil_ekspedisi);
                 }
             });
@@ -493,6 +497,8 @@ if (empty($_SESSION["keranjang"]) or !isset($_SESSION["keranjang"])) {
                     data: 'ekspedisi='+ekspedisi_terpilih+'&distrik='+distrik_terpilih+'&berat='+total_berat,
                     success:function(hasil_paket)
                     {
+                        console.log('hasil_paket',hasil_paket)
+
                         $("select[name=nama_paket]").html(hasil_paket);
                         // console.log(hasil_paket);
                         $("input[name=ekspedisi]").val(ekspedisi_terpilih);
