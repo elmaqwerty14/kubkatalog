@@ -99,8 +99,8 @@ if (!isset($_SESSION["pembeli"])) {
 
         // mendapatkan id_pembeli yang login
         $idpembeliyanglogin = $_SESSION["pembeli"]["id_pembeli"];
-        console.log($idpembeliyangbeli);
-        console.log($idpembeliyanglogin);
+        echo($idpembeliyangbeli);
+        echo($idpembeliyanglogin);
         if ($idpembeliyangbeli !== $idpembeliyanglogin) {
             echo "<script>alert('Jangan Sembarang!!!');</script>";
             echo "<script>location='index.php';</script>";
