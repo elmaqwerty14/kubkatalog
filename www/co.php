@@ -396,6 +396,7 @@ if (empty($_SESSION["keranjang"]) or !isset($_SESSION["keranjang"])) {
 
                     // mendapatkan id_pembelian yang barusan terjadi
                     $id_pembelian_barusan = $koneksi->insert_id;
+                    echo "<script>alert('Selamat Datang $id_pembelian_barusan');</script>";
                     echo(id_pembelian_barusan);
                     foreach ($_SESSION["keranjang"] as $id_menu => $jumlah) {
 
