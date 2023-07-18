@@ -422,7 +422,7 @@ if (empty($_SESSION["keranjang"]) or !isset($_SESSION["keranjang"])) {
                     unset($_SESSION["keranjang"]);
 
                     // tampilan dialihkan ke halaman nota, nota dari pembelian yang barusan
-                    echo "<script>alert('Pembelian Sukses');</script>";
+                    echo "<script>alert('Pembelian Sukses '$id_pembelian_barusan'');</script>";
                     echo "<script>location='nota.php?id=$id_pembelian_barusan';</script>";
                 }
                 ?>
