@@ -101,11 +101,11 @@ if (!isset($_SESSION["pembeli"])) {
         $idpembeliyanglogin = $_SESSION["pembeli"]["id_pembeli"];
         // echo($idpembeliyangbeli);
         // echo($idpembeliyanglogin);
-        // if ($idpembeliyangbeli !== $idpembeliyanglogin) {
-        //     echo "<script>alert('Jangan Sembarang!!!');</script>";
-        //     echo "<script>location='index.php';</script>";
-        //     exit();
-        // }
+        if ($idpembeliyangbeli !== $idpembeliyanglogin) {
+            echo "<script>alert('Jangan Sembarang!!!');</script>";
+            echo "<script>location='index.php';</script>";
+            exit();
+        }
 
         ?>
     </div>
