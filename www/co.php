@@ -393,7 +393,9 @@ if (empty($_SESSION["keranjang"]) or !isset($_SESSION["keranjang"])) {
 
                     // 1. menyimpan data ke tabel pembelian 
                     $koneksi->query("INSERT INTO pembelian (id_pembeli,tgl_pembelian,tgl_expired,alamat_pengiriman,total_berat,provinsi,distrik,tipe,kodepos,ekspedisi,paket,ongkir,estimasi,finaltotalbelanjabeli) VALUES ('$id_pembeli','$tgl_pembelian','$tgl_expired','$alamat_pengiriman','$total_berat','$provinsi','$distrik','$tipe','$kodepos','$ekspedisi','$paket','$ongkir','$estimasi','$finaltotalbelanjabeli')");
-
+                    if ($koneksi->query($query) === false) {
+                        die("Error dalam query: " . $koneksi->error);
+                    }
                     // mendapatkan id_pembelian yang barusan terjadi
                     $id_pembelian_barusan = $koneksi->insert_id;
                     // echo "<script>alert('Selamat Datang $id_pembelian_barusan');</script>";
@@ -423,7 +425,7 @@ if (empty($_SESSION["keranjang"]) or !isset($_SESSION["keranjang"])) {
 
                     // tampilan dialihkan ke halaman nota, nota dari pembelian yang barusan
                     echo "<script>alert('Pembelian Sukses $id_pembelian_barusan');</script>";
-                    echo "<script>location='nota.php?id=$id_pembelian_barusan';</script>";
+                    echo "<script>location.href='nota.php?id=$id_pembelian_barusan';</script>";
                 }
                 ?>
 
