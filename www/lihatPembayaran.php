@@ -38,8 +38,8 @@ if ($_SESSION["pembeli"]['id_pembeli'] !== $detbay["id_pembeli"]) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cofee Shop</title>
-    <link rel="shortcut icon" href="logoo.jpg">
+    <title>KUB MERCI</title>
+    <link rel="shortcut icon" href="logonew.jpeg">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/styleindex.css" rel="stylesheet">

@@ -32,7 +32,8 @@ if (empty($_SESSION["keranjang"]) or !isset($_SESSION["keranjang"])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kub Merci</title>
+    <title>KUB MERCI</title>
+    <link rel="shortcut icon" href="logonew.jpeg">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/styleindex.css" rel="stylesheet">

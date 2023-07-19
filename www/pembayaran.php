@@ -22,8 +22,8 @@ $id_pembeli_beli = $detpem["id_pembeli"];
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cofee Shop</title>
-    <link rel="shortcut icon" href="logoo.jpg">
+    <title>KUB MERCI</title>
+    <link rel="shortcut icon" href="logonew.jpeg">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/styleindex.css" rel="stylesheet">
@@ -130,7 +130,6 @@ $id_pembeli_beli = $detpem["id_pembeli"];
                             <option value="BANK BNI">BANK BNI</option>
                             <option value="BANK BRI">BANK BRI</option>
                             <option value="BANK MANDIRI">BANK MANDIRI</option>
-                            <option value="BANK NTT">BANK NTT</option>
                         </select>
                     </div>
                     <div class="form-group mb-3">

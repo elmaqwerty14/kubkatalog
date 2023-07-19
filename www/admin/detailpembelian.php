@@ -20,7 +20,7 @@ if (!isset($_SESSION["admin"])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nota</title>
+    <title>Detail Pembelian Pembeli</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/styleindex.css" rel="stylesheet">

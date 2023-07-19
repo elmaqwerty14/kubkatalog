@@ -10,6 +10,7 @@ include 'koneksi.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Daftar</title>
+    <link rel="shortcut icon" href="logonew.jpeg">
 </head>
 
 <style>

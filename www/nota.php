@@ -21,6 +21,7 @@ if (!isset($_SESSION["pembeli"])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nota</title>
+    <link rel="shortcut icon" href="logonew.jpeg">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/styleindex.css" rel="stylesheet">

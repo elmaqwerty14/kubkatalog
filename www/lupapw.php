@@ -9,7 +9,8 @@ include 'koneksi.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lupa Password</title>
+    <title>KUB MERCI</title>
+    <link rel="shortcut icon" href="logonew.jpeg">
 </head>
 
 <style>

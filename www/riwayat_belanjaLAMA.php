@@ -20,8 +20,8 @@ if (!isset($_SESSION["pembeli"])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cofee Shop</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>KUB MERCI</title>
+    <link rel="shortcut icon" href="logonew.jpeg">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/styleindex.css" rel="stylesheet">
     <link href="css/checkout.css" rel="stylesheet">

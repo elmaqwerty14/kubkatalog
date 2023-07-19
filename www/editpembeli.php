@@ -16,7 +16,8 @@ if (!isset($_SESSION["pembeli"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Edit Data Pembeli</title>
+    <title>KUB MERCI</title>
+    <link rel="shortcut icon" href="logonew.jpeg">
 </head>
 
 <style>
