@@ -392,7 +392,7 @@ if (empty($_SESSION["keranjang"]) or !isset($_SESSION["keranjang"])) {
                     $finaltotalbelanjabeli = $_POST["finaltotalbelanjabeli"];
 
                     // 1. menyimpan data ke tabel pembelian 
-                    $koneksi->query("INSERT INTO pembelian (id_pembeli,tgl_pembelian,tgl_expired,alamat_pengiriman,total_berat,provinsi,distrik,tipe,kodepos,ekspedisi,paket,ongkir,estimasi,finaltotalbelanjabeli) VALUES ('$id_pembeli','$tgl_pembelian','$tgl_expired','$alamat_pengiriman','$total_berat','$provinsi','$distrik','$tipe','$kodepos','$ekspedisi','$paket','$ongkir','$estimasi','$finaltotalbelanjabeli')");
+                    $koneksi->query("INSERT INTO pembelian (id_pembeli,tgl_pembelian,tgl_expired,alamat_pengiriman,resi_pengiriman,total_berat,provinsi,distrik,tipe,kodepos,ekspedisi,paket,ongkir,estimasi,finaltotalbelanjabeli) VALUES ('$id_pembeli','$tgl_pembelian','$tgl_expired','$alamat_pengiriman','','$total_berat','$provinsi','$distrik','$tipe','$kodepos','$ekspedisi','$paket','$ongkir','$estimasi','$finaltotalbelanjabeli')");
                     if ($koneksi->query($query) === false) {
                         die("Error dalam query: " . $koneksi->error);
                     }
