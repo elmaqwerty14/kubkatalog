@@ -394,9 +394,7 @@ if (empty($_SESSION["keranjang"]) or !isset($_SESSION["keranjang"])) {
                     // 1. menyimpan data ke tabel pembelian 
                     $koneksi->query("INSERT INTO pembelian (id_pembeli,tgl_pembelian,tgl_expired,alamat_pengiriman,resi_pengiriman,total_berat,provinsi,distrik,tipe,kodepos,ekspedisi,paket,ongkir,estimasi,finaltotalbelanjabeli,have_seen) VALUES ('$id_pembeli','$tgl_pembelian','$tgl_expired','$alamat_pengiriman','','$total_berat','$provinsi','$distrik','$tipe','$kodepos','$ekspedisi','$paket','$ongkir','$estimasi','$finaltotalbelanjabeli',0)");
                     if ($koneksi->query($query) === false) {
-                        <script>
-                        console.log("Error dalam query: " . $koneksi->error);
-                        </script>
+                        ("Error dalam query: " . $koneksi->error);
                     }
                     // mendapatkan id_pembelian yang barusan terjadi
                     $id_pembelian_barusan = $koneksi->insert_id;
