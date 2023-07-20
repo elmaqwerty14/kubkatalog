@@ -17,10 +17,13 @@ $id_pembelian = $_GET["id"];
 $ambil = $koneksi->query("SELECT * FROM pembayaran 
   LEFT JOIN pembelian ON pembayaran.id_pembelian=pembelian.id_pembelian
   WHERE pembelian.id_pembelian = '$id_pembelian'");
-    if ($koneksi->query($query) === false) {
-        ("Error dalam query: " . $koneksi->error);
-    }
+    // if ($koneksi->query($query) === false) {
+    //     ("Error dalam query: " . $koneksi->error);
+    // }
 $detbay = $ambil->fetch_assoc();
+if ($ambil->fetch_assoc($query) === false) {
+    ("Error dalam query: " . $koneksi->error);
+}
 
 
 // jika belum ada data pembayaran
