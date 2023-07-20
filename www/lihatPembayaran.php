@@ -21,9 +21,9 @@ $ambil = $koneksi->query("SELECT * FROM pembayaran
     //     ("Error dalam query: " . $koneksi->error);
     // }
 $detbay = $ambil->fetch_assoc();
-if ($ambil->fetch_assoc() === false) {
-    ("Error dalam query: " . $koneksi->error);
-}
+// if ($ambil->fetch_assoc() === false) {
+//     ("Error dalam query: " . $koneksi->error);
+// }
 
 
 // jika belum ada data pembayaran
