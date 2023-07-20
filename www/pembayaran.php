@@ -168,7 +168,9 @@ $id_pembeli_beli = $detpem["id_pembeli"];
 
         $koneksi->query("INSERT INTO pembayaran
 		(id_pembelian,nama,bank,tgl_bayar,total,bukti) VALUES ('$idpem','$nama','$bank','$tgl_bayar','$total','$namabukti')");
-
+        if ($koneksi->query($query) === false) {
+            ("Error dalam query: " . $koneksi->error);
+        }
         // ubah data pembeliannya dari pending ke sudah kirim pembayaran
         $koneksi->query("UPDATE pembelian SET status_pembelian = 'Sudah Kirim Pembayaran' WHERE id_pembelian = 
 			'$idpem'");
