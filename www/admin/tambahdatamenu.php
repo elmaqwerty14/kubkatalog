@@ -181,7 +181,7 @@ include '../koneksi.php';
                                         VALUES ('$_POST[nama_menu]','$_POST[id_kedai]','$_POST[harga_menu]','$_POST[deskripsi_menu]','$nama','$_POST[stok_menu]','$_POST[berat_produk]')");
 
                                         echo "<script>alert('Data Berhasil Ditambah');</script>";
-                                        echo "<script>location='daftarmenu.php';</script>";
+                                        echo "<script>location.href='daftarmenu.php';</script>";
                                       }
                                      ?> 
                                   </div>
