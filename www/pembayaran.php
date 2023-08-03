@@ -123,16 +123,6 @@ $id_pembeli_beli = $detpem["id_pembeli"];
                         <input type="nama" class="form-control input-field" readonly style="cursor: no-drop; background-color: #FFF;" placeholder="Masukan Nama Anda" required value="<?php echo $_SESSION['pembeli']['nama']; ?>" name="nama">
                     </div>
                     <div class="form-group mb-3">
-                        <i class="fa-solid fa-building-columns icon"></i>
-                        <select class="form-control input-field" name="bank" required>
-                            <option value="">Pilih Jenis Bank yang Digunakan</option>
-                            <option value="BANK BCA">BANK BCA</option>
-                            <option value="BANK BNI">BANK BNI</option>
-                            <option value="BANK BRI">BANK BRI</option>
-                            <option value="BANK MANDIRI">BANK MANDIRI</option>
-                        </select>
-                    </div>
-                    <div class="form-group mb-3">
                         <i class="fa-solid fa-calendar icon"></i>
                         <input type="date" class="form-control input-field" placeholder="Masukan Tanggal Pembayaran" name="tgl_bayar" required>
                     </div>
@@ -167,7 +157,7 @@ $id_pembeli_beli = $detpem["id_pembeli"];
 
 
         $koneksi->query("INSERT INTO pembayaran
-		(id_pembelian,nama,bank,tgl_bayar,total,bukti) VALUES ('$idpem','$nama','$bank','$tgl_bayar','$total','$namabukti')");
+		(id_pembelian,nama,bank,tgl_bayar,total,bukti) VALUES ('$idpem','$nama','','$tgl_bayar','$total','$namabukti')");
         if ($koneksi->query($query) === false) {
             ("Error dalam query: " . $koneksi->error);
         }

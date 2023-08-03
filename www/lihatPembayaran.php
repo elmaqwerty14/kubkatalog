@@ -137,7 +137,6 @@ if ($_SESSION["pembeli"]['id_pembeli'] !== $detbay["id_pembeli"]) {
         </div>
         <div class="row row-container justify-content-center">
             <div class="col-lg-4 mt-4 mb-5">
-                <?php echo "Image path: buktiBayar/" . $detbay['bukti']; ?>
                 <img src="buktiBayar/<?php echo $detbay["bukti"]; ?>" style="width: 100%; height: 60vh; vertical-align: middle;" alt="">
             </div>
             <div class="col-lg-7 mt-4 mb-5">
@@ -149,11 +148,11 @@ if ($_SESSION["pembeli"]['id_pembeli'] !== $detbay["id_pembeli"]) {
                             <td style="font-weight: 600;">:</td>
                             <td style="font-weight: 600; color: #DE831D;"><?php echo $detbay['nama']; ?></td>
                         </tr>
-                        <tr style="height: 60px;">
+                        <!-- <tr style="height: 60px;">
                             <td style="font-weight: 600;">Bank Penyetor</td>
                             <td style="font-weight: 600;">:</td>
                             <td style="font-weight: 600; color: #DE831D;"><?php echo $detbay['bank']; ?></td>
-                        </tr>
+                        </tr> -->
                         <tr style="height: 60px;">
                             <td style="font-weight: 600;">Tanggal Setor</td>
                             <td style="font-weight: 600;">:</td>

@@ -146,7 +146,7 @@ include '../koneksi.php';
                                                 <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title" id="ModalLabel">Ubah Kedai</h5>
+                                                            <h5 class="modal-title" id="ModalLabel">Ubah Data Etalase</h5>
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; outline: none;">
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>
@@ -154,7 +154,7 @@ include '../koneksi.php';
                                                         <div class="modal-body">
                                                             <form method="POST" enctype="multipart/form-data" action="daftarKedai.php?id=<?php echo $pecah['id_kedai']; ?>">
                                                                 <div class="form-group">
-                                                                    <label class="col-form-label">Kedai :</label>
+                                                                    <label class="col-form-label">Nama Etalase :</label>
                                                                     <input type="text" class="form-control" name="nama_kedai" value="<?php echo $pecah['nama_kedai']; ?>">
                                                                 </div>
                                                                 <!-- <div class="form-group">
@@ -202,7 +202,7 @@ include '../koneksi.php';
                                                                     <img src="../gambar_kedai/<?php echo $pecah['logo_kedai']; ?>" alt="" width="450">
                                                                 </div> -->
                                                                 <div class="form-group">
-                                                                    <label class="col-form-label">Logo Kedai :</label>
+                                                                    <label class="col-form-label">Logo Etalase :</label>
                                                                     <input type="file" class="form-control" name="logo_kedai" value="<?php echo $pecah['logo_kedai']; ?>">
                                                                 </div>
                                                                 <!-- <div class="form-group">

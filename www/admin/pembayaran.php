@@ -152,10 +152,10 @@ include '../koneksi.php';
                                                 <th>Nama Penyetor</th>
                                                 <td><?php echo $detail ['nama']; ?></td>
                                             </tr>
-                                            <tr>
+                                            <!-- <tr>
                                                 <th>Bank</th>
                                                 <td><?php echo $detail ['bank']; ?></td>
-                                            </tr>
+                                            </tr> -->
                                             <tr>
                                                 <th>Jumlah</th>
                                                 <td>Rp. <?php echo number_format($detail ['total']); ?></td>

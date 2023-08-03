@@ -129,7 +129,7 @@ include '../koneksi.php';
                                                 $jumlah_kedai = mysqli_num_rows($data_kedai);
                                                 ?>
                                                 <h5>Total <?php echo "$jumlah_kedai"; ?> data</h5>
-                                                <p class="mt-2 card-text">Kedai</p>
+                                                <p class="mt-2 card-text">Etalase</p>
                                             </div>
                                         </div>
                                     </div>
