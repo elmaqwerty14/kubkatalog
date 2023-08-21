@@ -73,9 +73,9 @@ include 'koneksi.php';
 
     <section id="home" class="home">
         <div class="media-icons">
-            <a href=""><i class="uil uil-facebook-f"></i></a>
-            <a href=""><i class="uil uil-instagram"></i></a>
-            <a href=""><i class="uil uil-youtube"></i></a>
+            <a href="https://www.facebook.com/p/KUB-MERCI-kec-Cilongok-100076704667062/"><i class="uil uil-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kubmerciofficial/"><i class="uil uil-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCqoghb2J3J2Wjl0c0Cv_G5w"><i class="uil uil-youtube"></i></a>
         </div>
         <div class="swiper bg-slider" style="width: 84%; height: 8px; margin-top: 2px;">
             <div class="swiper-wrapper">

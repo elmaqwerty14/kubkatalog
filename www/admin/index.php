@@ -211,9 +211,16 @@ include '../koneksi.php';
     <script>
         <?php
             // define hostname, username, password, dbname
-            $hostname = 'db';
-            $username = 'user';
-            $password = 'test';
+            // $hostname = 'db';
+            // $username = 'user';
+            // $password = 'test';
+            // $dbname = 'untukkatakog';
+            // koneksi ke database dengan definename
+
+            // define hostname, username, password, dbname
+            $hostname = 'localhost';
+            $username = 'root';
+            $password = '';
             $dbname = 'untukkatakog';
             // koneksi ke database dengan definename
             

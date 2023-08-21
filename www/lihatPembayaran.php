@@ -136,6 +136,9 @@ if ($_SESSION["pembeli"]['id_pembeli'] !== $detbay["id_pembeli"]) {
             <div class="border" style="width: 90px; height: 5px; background: #DE831D; border-radius: 6px; margin: 2px auto;"></div>
         </div>
         <div class="row row-container justify-content-center">
+            <div class="col-lg-4 mt-4 mb-5">
+                <img src="buktiBayar/<?php echo $detbay["bukti"]; ?>" style="width: 100%; height: 60vh; vertical-align: middle;" alt="">
+            </div>
             <div class="col-lg-7 mt-4 mb-5">
                 <table class="table noborder table-hover align-middle">
                     <tbody style="font-size: 16px;">
